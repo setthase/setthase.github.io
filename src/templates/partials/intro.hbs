@@ -1,0 +1,10 @@
+<h1>
+  <span class="first-name">{{ profile.firstName }}</span>
+  <span class="last-name">{{ profile.lastName }}</span>
+</h1>
+
+<div id="headline">
+  {{#each profile.headline}}
+  <span class="{{#unless @index}}visible{{/unless}}">{{this}}</span>
+  {{/each}}
+</div>

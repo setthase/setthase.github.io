@@ -1,0 +1,9 @@
+<h2>Courses</h2>
+
+<ul>
+  {{#each profile.courses}}
+  <li data-id="{{ id }}">
+    <strong>{{ title }}</strong> <span>{{ organiser }}</span>
+  </li>
+  {{/each}}
+</ul>

@@ -1,0 +1,20 @@
+/*
+ * Define variables used across all styles
+ */
+:root {
+  color-scheme: light dark;
+
+  --main-panel-width: 2fr;
+  --main-divider-color: light-dark(#ededed, #121212);
+  --main-background-color: light-dark(#fafafa, #050505);
+
+  --side-panel-width: 20rem;
+  --side-divider-color: light-dark(#abbaba, #909595);
+  --side-background-color: light-dark(#dfe7e8, #101b22);
+
+  --font-color: light-dark(#111, #fafafa);
+  --border-color: light-dark(#999, #999);
+
+  --selection-background-color: light-dark(#fcdbb3, #f39c00);
+  --selection-font-color: light-dark(#111, #fafafa);
+}

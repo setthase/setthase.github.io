@@ -13,7 +13,8 @@ export default [
   {
     id: "56c674eb-a8c9-4577-9840-566d3a652556",
     role: "Principal Software Engineer",
-    description: "",
+    description:
+      "Championed adherence to high-quality code standards and conducted thorough evaluations of pull requests to uphold code integrity. Orchestrated pair programming sessions and workshops to promote collaboration and knowledge exchange among team members. Provided mentorship to fellow software engineers, nurturing their professional growth within the team. Led the development of innovative projects by leveraging the latest web standards. Collaborated effectively with diverse teams and engaged with stakeholders to gather feedback and insights, fostering a culture of continuous improvement. Formulated architectural and system designs to enhance project efficiency and scalability.",
     skills: [],
     startDate: 1420070400000,
     endDate: 1625097600000,

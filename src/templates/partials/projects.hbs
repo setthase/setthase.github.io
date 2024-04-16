@@ -1,11 +1,10 @@
-<h2>Experience</h2>
+<h2>Projects</h2>
 
-{{#each experience }}
+{{#each projects }}
 <div data-id="{{ id }}">
   <header>
-    <h3>{{ role }}</h3>
+    <h3>{{ name }}</h3>
     <h4>
-      {{ company }} | {{ type }} |
       <span data-timestamp="{{ startDate }}">{{ toDate startDate }}</span> -
       <span data-timestamp="{{ endDate }}">{{ toDate endDate }}</span>
     </h4>
