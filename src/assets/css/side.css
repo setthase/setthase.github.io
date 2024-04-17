@@ -1,0 +1,54 @@
+/*
+ * Side section of the page
+ */
+body > aside {
+  & > section {
+    padding-bottom: 2rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      background: var(--side-divider-color);
+      width: 90%;
+      height: 1px;
+      display: block;
+      position: absolute;
+      bottom: 0.5rem;
+      right: -2rem;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    h2 {
+      padding: 1rem 0;
+    }
+
+    &:first-child h2 {
+      padding-top: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding-bottom: 0.25rem;
+
+        strong {
+          display: block;
+          padding-top: 0.5rem;
+        }
+
+        strong + span {
+          font-style: italic;
+        }
+
+        &:first-child strong {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}

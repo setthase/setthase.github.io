@@ -1,0 +1,17 @@
+<ul id="contact-info">
+  {{#each profile.contact }} {{#xif type "==" "link" }}
+  <li data-id="{{ id }}" data-icon="{{ icon }}">
+    <a href="{{ url }}" rel="noopener" target="_blank">{{ text }}</a>
+  </li>
+  {{else}} {{#xif type "==" "email" }}
+  <li
+    data-id="{{ id }}"
+    data-icon="{{ icon }}"
+    data-start="{{lowercase @root.profile.firstName }}"
+    data-origin="{{lowercase @root.profile.lastName }}"
+    data-end="{{ tld }}"
+  ></li>
+  {{else}}
+  <li data-id="{{ id }}" data-icon="{{ icon }}">{{ text }}</li>
+  {{/xif}} {{/xif}} {{/each}}
+</ul>

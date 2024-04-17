@@ -1,0 +1,222 @@
+/*
+ * Header section
+ */
+body > header {
+  display: grid;
+  grid-template-columns: var(--side-panel-width) var(--main-panel-width);
+  gap: 0px 0px;
+  grid-template-areas:
+    "contact intro"
+    "about about";
+
+  [data-section="intro"] {
+    grid-area: intro;
+
+    text-align: right;
+    padding: 3rem 2rem 1rem;
+  }
+
+  [data-section="contact"] {
+    grid-area: contact;
+
+    background-color: var(--side-background-color);
+    padding: 2rem 2rem 1rem;
+  }
+
+  [data-section="about"] {
+    grid-area: about;
+    padding: 1.5rem 0;
+    position: relative;
+
+    &::before,
+    &::after {
+      background: var(--border-color);
+      content: "";
+      display: block;
+      height: 1px;
+      width: 300vw;
+      position: absolute;
+      left: -100vw;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+
+#contact-info {
+  margin: 0;
+  padding: 0;
+
+  li {
+    font-size: 0.95rem;
+    list-style: none;
+    padding-bottom: 0.25rem;
+
+    a {
+      color: var(--font-color);
+      text-decoration: none;
+
+      &::after {
+        display: inline-block;
+        content: "";
+        width: 0.75rem;
+        height: 0.75rem;
+        margin-left: 0.25rem;
+        vertical-align: middle;
+
+        background-image: light-dark(
+          url("/assets/img/link-black.svg"),
+          url("/assets/img/link-white.svg")
+        );
+      }
+    }
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+      vertical-align: text-bottom;
+      background-repeat: no-repeat;
+    }
+
+    &[data-icon="mail"] {
+      display: none;
+    }
+
+    &[data-icon="deviantart"]::before {
+      background-image: light-dark(
+        url("/assets/img/deviantart-black.svg"),
+        url("/assets/img/deviantart-white.svg")
+      );
+    }
+
+    &[data-icon="github"]::before {
+      background-image: light-dark(
+        url("/assets/img/github-black.svg"),
+        url("/assets/img/github-white.svg")
+      );
+    }
+
+    &[data-icon="linkedin"]::before {
+      background-image: light-dark(
+        url("/assets/img/linkedin-black.svg"),
+        url("/assets/img/linkedin-white.svg")
+      );
+    }
+
+    &[data-icon="location"]::before {
+      background-image: light-dark(
+        url("/assets/img/location-black.svg"),
+        url("/assets/img/location-white.svg")
+      );
+    }
+
+    &[data-icon="mail"]::before {
+      background-image: light-dark(
+        url("/assets/img/mail-black.svg"),
+        url("/assets/img/mail-white.svg")
+      );
+    }
+
+    &[data-icon="stackoverflow"]::before {
+      background-image: light-dark(
+        url("/assets/img/stackoverflow-black.svg"),
+        url("/assets/img/stackoverflow-white.svg")
+      );
+    }
+  }
+}
+
+#headline {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+
+  span {
+    display: none;
+    overflow: hidden;
+    border-right: 0.15em solid var(--selection-background-color); /* The typwriter cursor */
+    white-space: nowrap;
+    letter-spacing: 0.15em;
+
+    &.visible {
+      display: block;
+      animation:
+        typing 3.5s steps(40, end),
+        deleting 3.5s steps(40, end) 6.5s,
+        blink-caret 1s step-end infinite;
+    }
+
+    @media (prefers-reduced-motion) {
+      &.visible {
+        border: none;
+        display: block;
+        animation: none;
+      }
+    }
+  }
+}
+
+body > header [data-section="intro"] h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  line-height: 1;
+  padding-bottom: 0.5rem;
+
+  span {
+    display: block;
+  }
+
+  .first-name {
+    font-weight: 200;
+  }
+
+  .last-name {
+    font-weight: 900;
+  }
+}
+
+body > header [data-section="about"] {
+  display: grid;
+  grid-template-columns: var(--side-panel-width) var(--main-panel-width);
+  gap: 0px 0px;
+  grid-template-areas: "photo contents";
+
+  h2 {
+    display: none;
+  }
+
+  img {
+    grid-area: photo;
+
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+
+    box-shadow:
+      0 0 0 6px light-dark(#f5f5f5, #050505),
+      0 0 0 7.5px light-dark(#050505, #f5f5f5);
+  }
+
+  [data-section="contents"] {
+    grid-area: contents;
+
+    padding: 0 1.5rem;
+
+    p {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

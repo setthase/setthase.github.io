@@ -1,0 +1,15 @@
+<h2>Projects</h2>
+
+{{#each projects }}
+<div data-id="{{ id }}">
+  <header>
+    <h3>{{ name }}</h3>
+    <h4>
+      <span data-timestamp="{{ startDate }}">{{ toDate startDate }}</span> -
+      <span data-timestamp="{{ endDate }}">{{ toDate endDate }}</span>
+    </h4>
+  </header>
+
+  <p>{{ description }}</p>
+</div>
+{{/each}}

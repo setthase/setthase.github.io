@@ -1,0 +1,24 @@
+/*
+ * Footer section
+ */
+body > footer {
+  display: grid;
+  grid-template-columns: var(--side-panel-width) var(--main-panel-width);
+  gap: 0px 0px;
+  grid-template-areas: "side main";
+
+  span:first-child {
+    grid-area: side;
+
+    background-color: var(--side-background-color);
+    padding: 2rem 2rem 1rem;
+  }
+
+  span:last-child {
+    grid-area: main;
+
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 3rem 2rem 1rem;
+  }
+}

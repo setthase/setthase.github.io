@@ -1,0 +1,51 @@
+{
+  "name": "setthase.github.io",
+  "scripts": {
+    "build": "npm run clean && npm run build:html && npm run build:css && npm run build:js && npm run build:img",
+    "build:css": "postcss src/assets/css/index.css -o dist/assets/css/main.css",
+    "build:html": "node scripts/generate-html.mjs",
+    "build:img": "cp -vr src/assets/img/ dist/assets/img",
+    "build:js": "esbuild src/assets/modules/**/*.ts --minify --tree-shaking=true --outdir=dist/assets/modules",
+    "clean": "rm -rf dist",
+    "lint": "npm run lint:prettier &&  npm run lint:typescript && npm run lint:html",
+    "lint:html": "html-validate dist",
+    "lint:prettier": "prettier --list-different data scripts src",
+    "lint:typescript": "tsc --noEmit",
+    "start": "http-server dist --cors -c-1"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-import": {},
+      "postcss-preset-env": {},
+      "cssnano": {}
+    }
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "*.hbs",
+        "options": {
+          "parser": "html"
+        }
+      }
+    ]
+  },
+  "private": true,
+  "devDependencies": {
+    "cssnano": "^6.1.1",
+    "esbuild": "^0.20.2",
+    "handlebars": "^4.7.8",
+    "html-minifier-terser": "^7.2.0",
+    "html-validate": "^8.18.1",
+    "http-server": "^14.1.1",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "postcss-preset-env": "^9.5.2",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.3"
+  }
+}

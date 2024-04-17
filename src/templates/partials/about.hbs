@@ -1,0 +1,14 @@
+<h2>About</h2>
+<img
+  src="/assets/img/avatar.webp"
+  alt="Profile picture of {{ profile.name}}"
+  width="200"
+  height="200"
+  loading="lazy"
+  decoding="async"
+/>
+<div data-section="contents">
+  {{#each profile.about }}
+  <p>{{ this }}</p>
+  {{/each}}
+</div>

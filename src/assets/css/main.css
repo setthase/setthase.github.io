@@ -1,0 +1,115 @@
+/*
+ * Main section of the page 
+ */
+body {
+  display: grid;
+  grid-template-columns: var(--side-panel-width) var(--main-panel-width);
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header"
+    "side main"
+    "footer footer";
+
+  overflow-x: hidden;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+
+    padding: 3rem 2rem 1rem;
+  }
+
+  aside {
+    grid-area: side;
+
+    background-color: var(--side-background-color);
+    padding: 3rem 2rem 1rem;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}
+
+body > main {
+  & > section {
+    padding-bottom: 2rem;
+
+    h2 {
+      padding-bottom: 1rem;
+      overflow-x: hidden;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 1px;
+        width: 100%;
+        vertical-align: middle;
+        margin-right: -100%; /* this is the trick here */
+        margin-left: 1rem;
+        background: var(--border-color);
+      }
+    }
+
+    & > [data-id] {
+      padding-top: 2rem;
+
+      &:first-of-type {
+        padding-top: 1rem;
+      }
+
+      &::after {
+        content: "";
+        width: 50%;
+        margin: 0 auto;
+        background: var(--main-divider-color);
+        height: 1px;
+        display: block;
+        margin-top: 1.5rem;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+
+      header {
+        padding-bottom: 0.5rem;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+main [data-section="testimonials"] {
+  blockquote {
+    text-indent: -1.5rem;
+    padding-left: 1.5rem;
+    white-space: pre-wrap;
+
+    &::before {
+      content: open-quote;
+      font-size: 3rem;
+      line-height: 0;
+      vertical-align: middle;
+      opacity: 0.5;
+      padding-right: 0.2rem;
+    }
+
+    &::after {
+      content: close-quote;
+    }
+  }
+
+  figcaption {
+    text-align: right;
+    font-style: italic;
+  }
+}

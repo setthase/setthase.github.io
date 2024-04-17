@@ -1,0 +1,9 @@
+<h2>References</h2>
+
+{{#each testimonials }}
+<figure data-id="{{ id }}">
+  <blockquote>{{{join contents '<br /><br />'}}}</blockquote>
+
+  <figcaption>— {{ author }}</figcaption>
+</figure>
+{{/each}}

@@ -1,0 +1,70 @@
+/*
+ * Make sure page looks good while printing it
+ */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  :root {
+    --side-panel-width: 25rem;
+  }
+
+  body {
+    background: white;
+    max-width: 95%;
+
+    /* Temporary hack for printing the page */
+    /* aside {
+      height: 375vh; // roughly 4 pages A4 with the current content
+    } */
+
+    footer {
+      display: none;
+    }
+  }
+
+  [data-id] {
+    break-inside: avoid;
+  }
+
+  #headline {
+    span,
+    span.visible {
+      animation: none;
+      border: none;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  #contact-info {
+    li {
+      padding-bottom: 0.5rem;
+
+      &[data-icon="mail"] {
+        display: list-item;
+
+        &::after {
+          content: attr(data-start) "\0040" attr(data-origin) attr(data-end);
+        }
+      }
+
+      a {
+        font-size: 0;
+
+        &::before {
+          content: attr(href);
+          font-size: 0.95rem;
+        }
+
+        &::after {
+          background: none;
+          content: none;
+          display: none;
+        }
+      }
+    }
+  }
+}

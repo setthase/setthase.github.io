@@ -1,0 +1,24 @@
+{{#> layout }}
+<header>
+  <section data-section="intro">{{> intro }}</section>
+  <section data-section="contact">{{> contact }}</section>
+  <section data-section="about">{{> about }}</section>
+</header>
+
+<main>
+  <section data-section="experience">{{> experience }}</section>
+  <section data-section="projects">{{> projects }}</section>
+  <section data-section="testimonials">{{> testimonials }}</section>
+</main>
+
+<aside>
+  <section data-section="education">{{> education }}</section>
+  <section data-section="courses">{{> courses }}</section>
+  <section data-section="skills">{{> skills }}</section>
+  <section data-section="languages">{{> languages }}</section>
+</aside>
+
+<footer>
+  <span></span><span>{{ profile.name }} © {{ currentYear }}</span>
+</footer>
+{{/layout}}
