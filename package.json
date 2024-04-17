@@ -13,6 +13,9 @@
     "lint:typescript": "tsc --noEmit",
     "start": "http-server dist --cors -c-1"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "postcss": {
     "plugins": {
       "postcss-import": {},
