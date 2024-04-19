@@ -7,14 +7,28 @@ body > footer {
   gap: 0px 0px;
   grid-template-areas: "side main";
 
-  span:first-child {
+  > span:first-child {
     grid-area: side;
+    position: relative;
 
     background-color: var(--side-background-color);
     padding: 2rem 2rem 1rem;
   }
 
-  span:last-child {
+  .logo {
+    position: absolute;
+
+    left: 2rem;
+    bottom: 2rem;
+    display: block;
+    width: calc(var(--side-panel-width) - 4rem);
+    height: calc(var(--side-panel-width) - 4rem);
+
+    background-color: var(--logo-background-color);
+    mask: url(/assets/img/logo.svg) no-repeat center;
+  }
+
+  > span:last-child {
     grid-area: main;
 
     font-size: 0.8rem;
