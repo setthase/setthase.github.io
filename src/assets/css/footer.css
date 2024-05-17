@@ -24,6 +24,7 @@ body > footer {
     width: calc(var(--side-panel-width) - 4rem);
     height: calc(var(--side-panel-width) - 4rem);
 
+    opacity: 0.75;
     background-color: var(--logo-background-color);
     mask: url(/assets/img/logo.svg) no-repeat center;
   }

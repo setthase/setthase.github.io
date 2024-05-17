@@ -1,7 +1,10 @@
-<h2>Top Skills</h2>
+<h2>Skills</h2>
 
 <ul>
-  {{#each skills }} {{#if promote}}
-  <li data-id="{{ id }}">{{ name }}</li>
-  {{/if}} {{/each}}
+  {{#each skills }} {{#unless promote}}
+  <li data-id="{{ id }}">
+    {{ name }}
+    <span class="proficiency" style="--level: {{proficiency}}%"></span>
+  </li>
+  {{/unless}} {{/each}}
 </ul>

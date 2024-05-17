@@ -112,6 +112,10 @@ Handlebars.registerHelper("xif", function (v1, operator, v2, options) {
   }
 });
 
+Handlebars.registerHelper("expandSkillId", (id) => {
+  return skills.find((s) => s.id === id)?.name;
+});
+
 // Register Handlebars partials
 for (let file of await getFilesRecursively(PARTIALS_DIR)) {
   Handlebars.registerPartial(

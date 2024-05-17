@@ -81,8 +81,29 @@ body > main {
         padding-bottom: 0.5rem;
       }
 
+      footer {
+        font-size: 0.8rem;
+        letter-spacing: 0.07em;
+        padding-top: 0.5rem;
+
+        span {
+          &::after {
+            content: ",";
+          }
+
+          &:last-child::after {
+            content: unset;
+          }
+        }
+      }
+
       p {
         line-height: 1.5;
+        margin-bottom: 1rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }

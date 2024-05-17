@@ -10,6 +10,17 @@
     </h4>
   </header>
 
-  <p>{{ description }}</p>
+  {{#each description}}
+  <p>{{ this }}</p>
+  {{/each}}
+
+  <footer>
+    <p>
+      <strong>Skills:</strong>
+      {{#each skills}}
+      <span data-id="{{this}}">{{ expandSkillId this }}</span>
+      {{/each}}
+    </p>
+  </footer>
 </div>
 {{/each}}

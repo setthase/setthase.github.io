@@ -1,0 +1,7 @@
+<h2>Top Skills</h2>
+
+<ul>
+  {{#each skills }} {{#if promote}}
+  <li data-id="{{ id }}">{{ name }}</li>
+  {{/if}} {{/each}}
+</ul>

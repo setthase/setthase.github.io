@@ -14,15 +14,63 @@
   body {
     background: white;
     max-width: 95%;
+    zoom: 85%;
 
-    /* Temporary hack for printing the page */
-    /* aside {
-      height: 375vh; // roughly 4 pages A4 with the current content
-    } */
+    > header {
+      [data-section="about"] {
+        display: block;
+
+        h2 {
+          display: block;
+          padding: 0 1.5rem 1rem;
+        }
+
+        img {
+          display: none;
+        }
+      }
+    }
+
+    aside {
+      /* Temporary hack for printing the page */
+      /* roughly 3 pages A4 with the current content */
+      height: 332vh;
+
+      [data-section="languages"] {
+        &::after {
+          display: none;
+        }
+      }
+
+      [data-section="skills"] {
+        padding-top: 1rem;
+      }
+    }
+
+    main [data-section] {
+      padding-top: 2rem;
+
+      &:first-child {
+        padding-top: 0;
+      }
+    }
 
     footer {
-      display: none;
+      > span:last-child {
+        display: none;
+      }
+
+      .logo {
+        opacity: 0.25;
+        position: fixed;
+        left: 4rem;
+        bottom: 2rem;
+      }
     }
+  }
+
+  [data-section] {
+    break-inside: avoid;
   }
 
   [data-id] {
