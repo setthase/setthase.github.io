@@ -6,7 +6,7 @@ export default [
       "Mendeley Cite, an add-in for Microsoft Word, expedites the referencing process for researchers, providing them with the means to swiftly and effortlessly insert references from their Mendeley library directly into their documents. It offers the capability to insert individual or multiple references and automatically generate a bibliography based on the inserted citations.",
     ],
     startDate: 1590969600000,
-    endDate: null,
+    endDate: 1722384000000,
     skills: [
       "5240ec0f-fd0d-40ee-86fc-63cf5937c963",
       "5eb9c282-82a0-4feb-8c94-3fcc624be327",
