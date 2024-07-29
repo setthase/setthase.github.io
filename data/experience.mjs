@@ -20,7 +20,7 @@ export default [
       "33688a0a-85fc-4ebe-9fe5-abca3bd4e06a",
     ],
     startDate: 1625097600000,
-    endDate: null,
+    endDate: 1722384000000,
     company: "Elsevier",
     type: "Full-time",
   },
