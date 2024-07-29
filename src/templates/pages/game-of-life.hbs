@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Game of Life</title>
+
+    <style>
+      html {
+        height: 100%;
+      }
+
+      body {
+        align-items: center;
+        background: #303030;
+        color: #fdfdfd;
+        display: flex;
+        height: 100%;
+        margin: 0;
+      }
+
+      canvas {
+        display: block;
+        margin: auto;
+      }
+
+      input[type="range"] {
+        transform: rotate(180deg);
+      }
+
+      .controls {
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <aside class="controls">
+      <label for="speed-controller">Animation speed:</label>
+      <input
+        id="speed-controller"
+        type="range"
+        min="1"
+        max="3"
+        value="2"
+        step="0.5"
+      />
+
+      <button id="pause" title="Pause">⏸︎</button>
+      <button id="resume" title="Resume">⏵</button>
+      <button id="restart" title="Restart">↪</button>
+    </aside>
+
+    <script type="module" src="/assets/modules/game-of-life.js"></script>
+  </body>
+</html>
