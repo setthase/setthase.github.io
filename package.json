@@ -14,7 +14,7 @@
     "start": "http-server dist --cors -c-1"
   },
   "engines": {
-    "node": "20.x"
+    "node": "22.x"
   },
   "postcss": {
     "plugins": {
@@ -35,16 +35,16 @@
   },
   "private": true,
   "devDependencies": {
-    "cssnano": "^6.1.1",
-    "esbuild": "^0.20.2",
+    "cssnano": "^7.0.6",
+    "esbuild": "^0.25.0",
     "handlebars": "^4.7.8",
     "html-minifier-terser": "^7.2.0",
-    "html-validate": "^8.18.1",
+    "html-validate": "^9.2.2",
     "http-server": "^14.1.1",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
-    "postcss-preset-env": "^9.5.2",
+    "postcss-preset-env": "^10.1.4",
     "prettier": "^3.2.5",
     "typescript": "^5.4.3"
   }
