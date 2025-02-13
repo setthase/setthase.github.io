@@ -1,5 +1,23 @@
 export default [
   {
+    id: "b90b0430-72d8-4d52-b175-a20b1b29d7da",
+    role: "Lead Frontend Programmer",
+    description: [
+      "Due to NDA restrictions, specific details cannot be disclosed.",
+    ],
+    skills: [
+      "a5636746-e94f-4ab3-82b5-87faaeed9cb9",
+      "4eb362b4-c844-43b7-a858-066fa3ddb7f4",
+      "916f6af0-41db-4d9b-b9fa-107ce3db3223",
+      "81434003-79d8-4767-b17c-efeef61fe3ea",
+      "729974b7-3ada-46e0-8fc8-22b1bde8648f",
+    ],
+    startDate: 1756767600000,
+    endDate: null,
+    company: "People Can Fly",
+    type: "Full-time",
+  },
+  {
     id: "bc7190c6-81fd-4510-b5dc-4f845ec3480e",
     role: "Software Engineering Lead",
     description: [

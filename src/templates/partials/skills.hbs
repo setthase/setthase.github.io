@@ -1,10 +1,10 @@
 <h2>Skills</h2>
 
 <ul>
-  {{#each skills }} {{#unless promote}}
+  {{#each skills }} {{#unless promote}} {{#if visible}}
   <li data-id="{{ id }}">
     {{ name }}
     <span class="proficiency" style="--level: {{proficiency}}%"></span>
   </li>
-  {{/unless}} {{/each}}
+  {{/if}} {{/unless}} {{/each}}
 </ul>
