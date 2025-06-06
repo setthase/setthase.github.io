@@ -12,7 +12,7 @@ export default [
       "81434003-79d8-4767-b17c-efeef61fe3ea",
       "729974b7-3ada-46e0-8fc8-22b1bde8648f",
     ],
-    startDate: 1756767600000,
+    startDate: 1725145200000,
     endDate: null,
     company: "People Can Fly",
     type: "Full-time",
@@ -21,10 +21,10 @@ export default [
     id: "bc7190c6-81fd-4510-b5dc-4f845ec3480e",
     role: "Software Engineering Lead",
     description: [
-      "Leading the team of Software & Quality Engineers in a safe and nurturing environment to develop Microsoft Word add-in using latest web standards and technologies.",
-      "Supporting their career growth, mentoring and providing moral support whenever needed.",
-      "Collaborating with Product and UX team members whilst building roadmaps, discovering new opportunities and managing team's processes.",
-      "Communicating with stakeholders and other departments, attending cross-team discussion forums and supporting team during Scrum & other Agile ceremonies.",
+      "Led a team of Software & Quality Engineers to develop Microsoft Word add-in using latest web standards and technologies.",
+      "Supported career growth, mentored and provided moral support to team members.",
+      "Collaborated with Product and UX teams to build roadmaps, discover new opportunities, and manage team processes.",
+      "Communicated with stakeholders and other departments, attended cross-team discussion forums, and supported the team during Scrum & other Agile ceremonies.",
     ],
     skills: [
       "a5636746-e94f-4ab3-82b5-87faaeed9cb9",
