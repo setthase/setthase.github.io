@@ -30,13 +30,17 @@ body > header {
 
     &::before,
     &::after {
+      --negative-space: calc(100vw - var(--max-content-width));
+      --translate-distance: calc(max(var(--negative-space), 0px) / -2);
+
       background: var(--border-color);
       content: "";
       display: block;
       height: 1px;
-      width: 300vw;
+      width: 100vw;
       position: absolute;
-      left: -100vw;
+      left: 0;
+      transform: translateX(var(--translate-distance));
     }
 
     &::before {

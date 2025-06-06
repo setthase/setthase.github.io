@@ -4,6 +4,8 @@
 :root {
   color-scheme: light dark;
 
+  --max-content-width: 1024px;
+
   --main-panel-width: 2fr;
   --main-divider-color: light-dark(#ededed, #121212);
   --main-background-color: light-dark(#fafafa, #050505);
