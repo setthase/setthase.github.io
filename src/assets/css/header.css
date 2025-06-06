@@ -91,10 +91,10 @@ body > header {
       display: none;
     }
 
-    &[data-icon="deviantart"]::before {
+    &[data-icon="artstation"]::before {
       background-image: light-dark(
-        url("/assets/img/deviantart-black.svg"),
-        url("/assets/img/deviantart-white.svg")
+        url("/assets/img/artstation-black.svg"),
+        url("/assets/img/artstation-white.svg")
       );
     }
 

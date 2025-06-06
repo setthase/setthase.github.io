@@ -36,9 +36,9 @@ export default {
     {
       id: "88e3d58a-7bb2-42f6-aa73-8abdb544d0d7",
       type: "link",
-      icon: "deviantart",
-      text: "deviantart.com/setthase",
-      url: "https://deviantart.com/setthase",
+      icon: "artstation",
+      text: "artstation.com/setthase",
+      url: "https://www.artstation.com/setthase",
     },
     {
       id: "16a051d5-6887-42bd-9870-ce9d749a3741",
