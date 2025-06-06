@@ -15,20 +15,6 @@ body > footer {
     padding: 2rem 2rem 1rem;
   }
 
-  .logo {
-    position: absolute;
-
-    left: 2rem;
-    bottom: 2rem;
-    display: block;
-    width: calc(var(--side-panel-width) - 4rem);
-    height: calc(var(--side-panel-width) - 4rem);
-
-    opacity: 0.75;
-    background-color: var(--logo-background-color);
-    mask: url(/assets/img/logo.svg) no-repeat center;
-  }
-
   > span:last-child {
     grid-area: main;
 

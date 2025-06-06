@@ -38,8 +38,11 @@ body > header {
       display: block;
       height: 1px;
       width: 100vw;
+
       position: absolute;
+      z-index: 2;
       left: 0;
+
       transform: translateX(var(--translate-distance));
     }
 
