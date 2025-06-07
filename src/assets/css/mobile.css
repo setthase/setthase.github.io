@@ -1,0 +1,117 @@
+/*
+ * Make sure page looks good on low resolution screens
+ */
+@media screen and (max-width: 1023px) {
+  body {
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "experience"
+      "education"
+      "courses"
+      "top-skills"
+      "languages"
+      "projects"
+      "skills"
+      "testimonials"
+      "footer";
+
+    > main,
+    > aside {
+      display: contents;
+
+      > [data-section] {
+        padding: 1rem 2rem 1rem;
+
+        h2::after {
+          content: "";
+          display: inline-block;
+          height: 1px;
+          width: 100%;
+          vertical-align: middle;
+          margin-right: -100%; /* this is the trick here */
+          margin-left: 1rem;
+          background: var(--border-color);
+        }
+
+        &::after {
+          content: unset;
+        }
+      }
+    }
+
+    [data-section="experience"] {
+      grid-area: experience;
+    }
+
+    [data-section="projects"] {
+      grid-area: projects;
+    }
+
+    [data-section="testimonials"] {
+      grid-area: testimonials;
+    }
+
+    [data-section="education"] {
+      grid-area: education;
+    }
+
+    [data-section="courses"] {
+      grid-area: courses;
+    }
+
+    [data-section="top-skills"] {
+      grid-area: top-skills;
+    }
+
+    [data-section="languages"] {
+      grid-area: languages;
+    }
+
+    [data-section="skills"] {
+      grid-area: skills;
+    }
+
+    > aside .logo {
+      display: none;
+    }
+
+    > header {
+      display: block;
+
+      [data-section="contact"] {
+        border-top: 1px solid var(--border-color);
+        text-align: center;
+
+        li {
+          display: inline-block;
+          padding-right: 1rem;
+        }
+      }
+    }
+
+    > footer {
+      display: block;
+
+      > span:first-child {
+        display: none;
+      }
+
+      > span:last-child {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 665px) {
+  body > header [data-section="about"] {
+    display: block;
+
+    img {
+      display: none;
+    }
+  }
+}

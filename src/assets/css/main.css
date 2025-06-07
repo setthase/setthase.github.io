@@ -18,20 +18,20 @@ body {
     grid-area: header;
   }
 
-  main {
+  > main {
     grid-area: main;
 
     padding: 3rem 2rem 1rem;
   }
 
-  aside {
+  > aside {
     grid-area: side;
 
     background-color: var(--side-background-color);
     padding: 3rem 2rem 1rem;
   }
 
-  footer {
+  > footer {
     grid-area: footer;
   }
 }
