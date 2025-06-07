@@ -12,7 +12,7 @@ export default [
       "81434003-79d8-4767-b17c-efeef61fe3ea",
       "729974b7-3ada-46e0-8fc8-22b1bde8648f",
     ],
-    startDate: 1725145200000,
+    startDate: 1725231600000,
     endDate: null,
     company: "People Can Fly",
     type: "Full-time",
