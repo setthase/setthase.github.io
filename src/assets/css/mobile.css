@@ -24,15 +24,19 @@
       > [data-section] {
         padding: 1rem 2rem 1rem;
 
-        h2::after {
-          content: "";
-          display: inline-block;
-          height: 1px;
-          width: 100%;
-          vertical-align: middle;
-          margin-right: -100%; /* this is the trick here */
-          margin-left: 1rem;
-          background: var(--border-color);
+        h2 {
+          overflow-x: hidden;
+
+          &::after {
+            content: "";
+            display: inline-block;
+            height: 1px;
+            width: 100%;
+            vertical-align: middle;
+            margin-right: -100%; /* this is the trick here */
+            margin-left: 1rem;
+            background: var(--border-color);
+          }
         }
 
         &::after {
